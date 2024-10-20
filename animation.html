@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body class="body">
+        <style>
+            .body{
+                background-color: rgb(2, 3, 27);
+            }
+            .card{
+                margin: auto;
+                padding: 2em;
+                height: 100%;
+                width: 300px;
+                background-color: rgb(15, 15, 84);
+                color: rgb(119, 116, 116);
+                text-align: center;
+                border-radius: 10px;
+                position: relative;
+                margin-top: 200px;
+                font-family: arial;
+            }
+            @property --angle{
+                syntax: "<angle>";
+                    initial-value: 0deg;
+                    inherits: false;
+            }
+
+
+            .card ::after, .card ::before{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-image: conic-gradient(from var(--angle), rgb(255, 21, 21), rgb(50, 255, 50),rgb(62, 62, 255),rgb(255, 175, 27), rgb(255, 15, 15));
+                left:50%;
+                top:50%;
+                translate: -50% -50%;
+                z-index: -1;
+                border-radius: 15px;
+                padding: 7px;
+                animation: 3s spin linear infinite;
+            }
+            .card ::before{
+                filter: blur(1.5rem);
+                opacity: 0.6;
+            }
+            @keyframes spin{
+                from{
+                    --angle: 0deg;
+                }
+                to{
+                    --angle: 360deg;
+                }
+            }
+            .h1{
+                color: white;
+                font-family: arial;
+                margin-top: 0px;
+            }
+            .para{
+                line-height: 20px;
+                font-size: large ;
+            }
+            .image{
+                height: 180px;
+                margin-bottom: 10px;
+                margin-top: 5px;
+                border-radius: 90px;
+                
+            }
+        </style>
+
+
+
+
+
+
+
+        <div class="card">
+            <h1 class="h1">Koenigsegg Jesko</h1>
+            <img class="image" src="Pre-series Jesko 1.jpg">
+            <p2 class="para">They feature a redesigned 5.0 litre twin-turbo V8 engine
+                producing 1280 hp on standard gasoline and 1600 hp on E85
+                biofuel (in some markets) alongside the revolutionary new
+                9-speed Koenigsegg Light Speed Transmission (LST)
+                system. Advanced aerodynamics offer over 1000 kg of
+                downforce, making it the ultimate track weapon.</p2>
+        </div>
+    </body>
+</html>
